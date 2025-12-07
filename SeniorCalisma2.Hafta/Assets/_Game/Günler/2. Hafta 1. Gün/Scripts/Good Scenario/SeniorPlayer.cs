@@ -11,7 +11,7 @@ public class SeniorPlayer : MonoBehaviour
         _currentWeapon = GetComponents<IWeapon>();
 
         // Hiç silah bulunup bulunmadığını kontrol et.
-        if (_currentWeapon == null || _currentWeapon.Length == 0)
+        if ((_currentWeapon?.Length ?? 0) == 0)
         {
             Debug.LogError(
                 "Bu GameObject üzerinde IWeapon implemente eden hiçbir component bulunamadı!"
