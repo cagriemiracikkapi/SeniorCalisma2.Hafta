@@ -34,6 +34,15 @@ Hazırlanan paketi bir mesajla tarihe kazır.
     *   *Örnek:* `git commit -m "Bazooka atış mekaniği eklendi"`
     *   *İpucu:* Mesajlarınızda "güncelleme", "fix" gibi tek kelimelik ifadeler yerine, yapılan işi özetleyen emir kipli cümleler kurun.
 
+### 2.1 Commit Mesajı Standartları (Conventional Commits)
+Profesyonel dünyada commit mesajları `tür(kapsam): açıklama` formatında yazılır. Bu, geçmişi okumayı çok kolaylaştırır.
+
+*   **feat:** Yeni bir özellik eklendiğinde. (Örn: `feat: Karakter ziplama mekanigi eklendi`)
+*   **fix:** Bir hata düzeltildiğinde. (Örn: `fix: Mermilerin duvardan gecme sorunu duzeltildi`)
+*   **chore:** Kodda değişiklik yapmayan bakım işleri (Meta dosyaları, temizlik). (Örn: `chore: Gereksiz scriptler silindi`)
+*   **refactor:** Kodu daha temiz hale getirme (Sonuç değişmez, kod güzelleşir). (Örn: `refactor: Oyuncu hareket kodlari optimize edildi`)
+*   **docs:** Sadece dökümantasyon değişikliği. (Örn: `docs: Kullanim kilavuzu guncellendi`)
+
 ## 3. Geçmişe Bakış (History)
 Projede daha önce neler yapıldığını görmek için kullanılır.
 *   **Detaylı Liste:** `git log` (Çıkmak için `q` tuşuna basın)
