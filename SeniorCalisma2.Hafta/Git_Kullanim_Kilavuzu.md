@@ -80,3 +80,27 @@ Kodlarınızı yerel bilgisayarınızdan GitHub/GitLab gibi sunuculara gönderme
 ## 🛡️ Unity İçin Özel Notlar
 *   **Metadata (.meta) Dosyaları:** Unity'de her dosyanın bir `.meta` dosyası vardır. Bir scripti veya asset'i siliyorsanız/taşıyorsanız, `.meta` dosyasının da Git tarafından işlendiğinden emin olun.
 *   **.gitignore:** `Library`, `Temp`, `Logs`, `Build` gibi klasörler asla Git'e atılmamalıdır. Projenin başında doğru bir `.gitignore` dosyası olduğundan emin olun.
+
+## 7. İleri Seviye (Arayüzde Olmayanlar)
+Bu komutlar genelde "Source Control" butonlarında bulunmaz, terminalden yazılır ve hayat kurtarır.
+
+### A. Gelecekten Gelen Kurtarıcı: Reflog
+Silinmiş branchleri, yanlışlıkla yapılan resetleri, kaybolan commitleri bile bulur. Git'in "Kara Kutusu"dur.
+*   **Komut:** `git reflog`
+    *   *Senaryo:* "Eyvah! `reset --hard` yaptım her şey gitti, keşke 5 dk öncesine dönebilsem."
+    *   *Kullanımı:* Listeden ID'yi bul (örn: `HEAD@{2}`) ve `git reset --hard HEAD@{2}` yap.
+
+### B. Geçici Zulalama (Stash)
+İşiniz bitmeden başka bir şeye bakmanız gerekirse, mevcut dağınıklığı geçici bir cebe atar.
+*   **Zulala (Sakla):** `git stash` (Ortalık tertemiz olur)
+*   **Geri Getir (Çıkar):** `git stash pop` (Eski dağınıklık geri gelir)
+
+### C. Boş Commit (Empty Commit)
+Kod değiştirmeden sadece tarihçeye "Burada yeni bir dönem başladı" gibi not düşmek için.
+*   **Komut:** `git commit --allow-empty -m "Buraya notunuzu yazin"`
+
+### D. Seçmeli Kopya (Cherry Pick)
+Başka bir daldan veya geçmişten **sadece tek bir commit'i** alıp buraya getirmek için kullanılır. Arayüzde genelde yoktur.
+*   **Komut:** `git cherry-pick <COMMIT_ID>`
+    *   *Senaryo:* "Diğer dalda 50 tane değişiklik var, hepsini merge yaparsam bozulur. Bana sadece o 'Top Ekleme' kodunu cımbızla ver."
+
