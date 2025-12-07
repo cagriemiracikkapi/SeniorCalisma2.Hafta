@@ -60,6 +60,12 @@ Ana projeyi (`main`) bozmadan yeni bir özellik denemek veya geliştirmek için 
 1.  Ana dala dön: `git checkout main`
 2.  Diğer dalı içine al: `git merge yeni-ozellik-ismi`
 
+### 4.1 Özel Seçim (Cherry Pick)
+Başka bir daldan veya geçmişten **sadece tek bir commit'i** alıp buraya getirmek için kullanılır. "Hepsini istemiyorum, sadece şu özelliği ver" demektir.
+
+*   **Komut:** `git cherry-pick <COMMIT_ID>`
+    *   *Senaryo:* "Diğer dalda 50 tane değişiklik var ama bana sadece o 'Top Ekleme' kodu lazım."
+
 ## 5. Geri Alma (Undo & Restore)
 Kaydedilmemiş değişiklikleri çöpe atmak ve dosyanın son temiz haline dönmek için kullanılır.
 *   **Komut:** `git restore DosyaAdi.cs`
