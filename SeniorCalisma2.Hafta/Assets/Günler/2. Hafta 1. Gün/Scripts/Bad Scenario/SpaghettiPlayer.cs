@@ -49,11 +49,11 @@ public class SpaghettiPlayer : MonoBehaviour
     {
         // Her silahın varlığını kontrol edip ayrı ayrı ateşliyoruz.
         if (_pistol != null)
-            _pistol.Fire();
+            _pistol.FireSpagetti();
         if (_shotgun != null)
-            _shotgun.Fire();
+            _shotgun.FireSpagetti();
         if (_laser != null)
-            _laser.Fire();
+            _laser.FireSpagetti();
 
         // Yeni silah eklenirse, buraya yeni bir Fire çağrısı eklenmeli:
         // if (_rifle != null) _rifle.Fire();
