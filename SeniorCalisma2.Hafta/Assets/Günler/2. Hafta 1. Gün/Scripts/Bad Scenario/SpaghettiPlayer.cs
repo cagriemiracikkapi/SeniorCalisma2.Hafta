@@ -11,6 +11,7 @@ public class SpaghettiPlayer : MonoBehaviour
     // Her silah tipi için ayrı bir referans tutmak zorundayız.
     private Pistol _pistol;
     private Shotgun _shotgun;
+    private Laser _laser;
 
     // Yeni bir silah (örn: Rifle) eklenirse, buraya yeni bir satır eklenmeli:
     // private Rifle _rifle;
@@ -20,6 +21,7 @@ public class SpaghettiPlayer : MonoBehaviour
         // Her bir silah component'ini ayrı ayrı buluyoruz.
         _pistol = GetComponent<Pistol>();
         _shotgun = GetComponent<Shotgun>();
+        _laser = GetComponent<Laser>();
 
         // Geliştiriciyi uyarmak için kontrol ekleyelim.
         // Bu kontroller, bir component'in eklenmeyi unutulması gibi durumları anında fark etmemizi sağlar.
@@ -27,6 +29,8 @@ public class SpaghettiPlayer : MonoBehaviour
             Debug.LogWarning("Player üzerinde Pistol component'i bulunamadı!");
         if (_shotgun == null)
             Debug.LogWarning("Player üzerinde Shotgun component'i bulunamadı!");
+        if (_laser == null)
+            Debug.LogWarning("Player üzerinde Laser component'i bulunamadı!");
 
         // Yeni silah eklenirse, buraya yeni bir GetComponent çağrısı eklenmeli:
         // _rifle = GetComponent<Rifle>();
@@ -48,6 +52,9 @@ public class SpaghettiPlayer : MonoBehaviour
             _pistol.Fire();
         if (_shotgun != null)
             _shotgun.Fire();
+        if (_laser != null)
+            _laser.Fire();
+
         // Yeni silah eklenirse, buraya yeni bir Fire çağrısı eklenmeli:
         // if (_rifle != null) _rifle.Fire();
     }

@@ -8,5 +8,10 @@ public class Pistol : MonoBehaviour, IWeapon
         Debug.Log("Senior Pistol: Bam! (Hızlı)");
     }
 
+    public void FireSpagetti()
+    {
+        Debug.Log("Spagetti Pistol: Bam! (Hızlı)");
+    }
+
     // Update is called once per frame
 }

@@ -7,4 +7,9 @@ public class Laser : MonoBehaviour, IWeapon
     {
         Debug.Log("Senior Laser: BUM! (İnce Çizgi)");
     }
+
+    public void FireSpagetti()
+    {
+        Debug.Log("Spagetti Laser: BUM! (İnce Çizgi)");
+    }
 }

@@ -7,4 +7,9 @@ public class Shotgun : MonoBehaviour, IWeapon
     {
         Debug.Log("Senior Shotgun: BUM! (Geniş Alan)");
     }
+
+    public void FireSpagetti()
+    {
+        Debug.Log("Spagetti Shotgun: BUM! (Geniş Alan)");
+    }
 }
