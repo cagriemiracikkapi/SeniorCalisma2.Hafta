@@ -13,5 +13,10 @@ public class Pistol : MonoBehaviour, IWeapon
         Debug.Log("Spagetti Pistol: Bam! (Hızlı)");
     }
 
+    public void FireSpagettiDeneme()
+    {
+        Debug.Log("Spagetti Pistol: Bam! (Hızlı)");
+    }
+
     // Update is called once per frame
 }
